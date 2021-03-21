@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="./dist/css/style.min.css" />
+  </head>
+  <body>
+    <div class="d-flex input-box">
+      <label for="color1">Color 1:</label>
+      <input type="color" name="color1" id="color1" />
+      
+      <label for="color2">Color 2:</label>
+      <input type="color" name="color2" id="color2" />
+
+      <label for="typegrad">Gradient type:</label>
+      <select name="typegrad" id="typegrad">
+        <option value="linear-gradient">Linear</option>
+        <option value="radial-gradient">Radial</option>
+      </select>
+
+      <label for="shapes" id="shapes-label">shapes:</label>
+      <select name="shapes" id="shapes">
+        <option value="circle">circle</option>
+        <option value="closest-side">closest-side</option>
+        <option value="farthest-side">farthest-side</option>
+        <option value="closest-corner">closest-corner</option>
+        <option value="farthest-corner">farthest-corner</option>
+      </select>
+
+      <label for="direction">Direction:</label>
+      <select name="direction" id="direction">
+        <option value="top">Top</option>
+        <option value="top right">Top Right</option>
+        <option value="top left">Top left</option>
+        <option value="right">Right</option>
+        <option value="bottom">Bottom</option>
+        <option value="bottom right">Bottom right</option>
+        <option value="bottom left">Bottom left</option>
+        <option value="left">Left</option>
+      </select>
+
+      <input type="submit" value="Generate" id="getcol" />
+
+    </div>
+
+    <div class="display"></div>
+
+    <div class="d-flex sec-2">
+      <input type="button" value="copy code" onclick="copyCode()" />
+      <input type="button" value="Download image" onclick="printDiv()" />
+      <input
+        type="text"
+        name="displayCode"
+        id="displayCode"
+        placeholder="code will be here..."
+      />
+    </div>
+
+    <script src="./html2canvas.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

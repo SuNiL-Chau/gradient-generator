@@ -1,0 +1,86 @@
+@mixin i-style {
+  border: 0;
+  outline: 0;
+  background: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0 40px 0px #d3d3d3;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fdfdfd;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 425px) {
+    width: 320px;
+    margin: 0 auto;
+    label,
+    input,
+    select {
+      margin: 0.5rem 0;
+    }
+  }
+
+  label {
+    padding: 0.5rem 1rem;
+  }
+
+  input[type="submit"] {
+    margin: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  input,
+  select {
+    @include i-style();
+  }
+  #shapes-label,
+  #shapes {
+    display: none;
+  }
+}
+
+.input-box {
+  margin-top: calc(100vh - 85vh);
+}
+
+.display {
+  width: 95vw;
+  height: 45vh;
+  padding: 0 !important;
+  background: #000;
+  margin: 2rem auto 0;
+  @media screen and (max-width: 560px) {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sec-2 {
+  & input {
+    margin-top: 2rem;
+    padding: 0.5rem 0.8rem;
+    &:not(:last-child) {
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.show {
+  display: inline-block !important;
+}
